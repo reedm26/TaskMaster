@@ -9,6 +9,16 @@ export default class ListController {
     //NOTE: After the store loads, we can automatically call to draw the lists.
     _drawLists();
   }
+  addList() {
+    event.preventDefault(), console.log("made it");
+    let formData = event.target;
+    let newList = {
+      name: formData.name.value
+    };
+    ListService.addList(newList);
+    formData.reset();
+    _drawLists();
+  }
 
   //TODO: Your app will need the ability to create, and delete both lists and listItems
 }

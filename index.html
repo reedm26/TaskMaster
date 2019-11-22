@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Task Manager</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/style.css">
-    <title>Listmon</title>
-</head>
-
-<body>
-
+  <body>
+    <header>
+      <div class="container-fluid">
+                    <div class="row form-group  justify-content-center">
+                            <div class="col-12 bg-dark">
+                                <h1 class="text-light text-center">List Maker 2.0</h1>
+                                <form id="newList" onsubmit="app.listController.addList()">
+                                        <input type="text" class="form-control" name="newList" id="newList" placeholder="New List...">
+                                        <button class="btn btn-secondary m-1">Add</button>
+                                    </form>
+                            </div>
+                        </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <script src="app/main.js" type="module"></script>
-</body>
-
+  </body>
 </html>

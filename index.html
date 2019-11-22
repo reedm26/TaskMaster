@@ -12,24 +12,24 @@
     <title>Task Manager</title>
   </head>
 
-  <body>
-    <header>
-      <div class="container-fluid">
-                    <div class="row form-group  justify-content-center">
-                            <div class="col-12 bg-dark">
-                                <h1 class="text-light text-center">List Maker 2.0</h1>
-                                <form id="newList" onsubmit="app.listController.addList()">
-                                        <input type="text" class="form-control" name="newList" id="newList" placeholder="New List...">
-                                        <button class="btn btn-secondary m-1">Add</button>
-                                    </form>
-                            </div>
-                        </div>
-            </div>
-          </div>
-        </div>
+  <body class="container-fluid">
+    <header class="row">
+      <div class="col-12 bg-dark">
+        <h1 class="text-light text-center">List Maker 2.0</h1>
+        <form onsubmit="app.listController.addList(event)">
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            placeholder="New List..."
+          />
+          <button type="submit" class="btn btn-secondary m-1">Add</button>
+        </form>
       </div>
     </header>
-
+    <main class="row">
+      <div id="list" class="col-12"></div>
+    </main>
     <script src="app/main.js" type="module"></script>
   </body>
 </html>

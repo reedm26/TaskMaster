@@ -17,9 +17,9 @@ export default class List {
         <div class="row form-group justify-content-center">
             <label for="name" class="col-form-label"></label>
             <input type="text" class="form-control" name="name" placeholder="Task.."/>
-            <button class="btn btn-warning mt-1" type="submit">Add Task</button>
+            <button class="btn btn-warning mt-1" >Add Task</button>
             <button class="btn btn-danger mt-1">Remove List</button>
-            <div>'${this.drawTasks()}'</div>
+            <div>${this.drawTasks()}</div>
         </div>
       </form>
     </div>`;

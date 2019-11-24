@@ -28,7 +28,8 @@ export default class ListController {
     _drawLists();
   }
   addTask(event, listId) {
-    event.preventDefault(), console.log("made it");
+    event.preventDefault();
+    console.log("made it");
     let form = event.target;
     let newTask = {
       name: form.name.value,

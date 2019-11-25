@@ -1,5 +1,6 @@
 import ListService from "../Services/ListService.js";
 import store from "../store.js";
+import Tasks from "../Models/Tasks.js";
 
 //TODO Don't forget to render to the screen after every data change.
 function _drawLists() {
@@ -30,7 +31,7 @@ export default class ListController {
     let form = event.target;
     let newTask = {
       name: form.name.value,
-      listId
+      listId: listId
     };
 
     ListService.addTask(newTask);

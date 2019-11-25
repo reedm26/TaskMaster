@@ -21,6 +21,12 @@ class ListService {
     // find the list by its id then add this task (push) to that list
     // store.State.lists.push(task);
   }
+  deleteList(listId) {
+    let foundList = store.State.lists.findIndex(list => list.id == listId);
+    store.State.lists = store.State.lists.filter(list => list.id != listId);
+    store.saveState();
+  }
+  constructor() {}
   //TODO  Here is where we handle all of our business logic,
   //given the information you need in the controller,
   //what methods will you need to do when this class is first 'constructed'?

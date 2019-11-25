@@ -14,7 +14,7 @@ class ListService {
   addTask(newTask) {
     let task = new Task(newTask);
     let foundlist = store.State.lists.find(list => list.id == task.listId);
-    foundlist.task.push(task);
+    foundlist.tasks.push(task);
     console.log("made it to");
     store.saveState();
     // find the list by its id then add this task (push) to that list

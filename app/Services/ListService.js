@@ -30,10 +30,10 @@ class ListService {
   }
 
   deleteTask(listId, taskId) {
-    let foundSession = store.State.sessions.find(task => task.id == taskId);
-    foundSession.speakers = foundSession.tasks.filter(
-      speaker => speaker.id != taskId
-    );
+    if (confirm("Are you sure you wanna remove?")) {
+    } else return;
+    let foundlist = store.State.list.find(list => list.id == listId);
+    foundlist.tasks = foundlist.tasks.filter(task => task.id != taskId);
     store.saveState();
   }
 

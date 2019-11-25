@@ -4,7 +4,7 @@ export default class List {
   constructor({ id = generateId(), name, tasks = [] }) {
     this.id = id;
     this.name = name;
-    this.task = tasks.map(s => new Task(s));
+    this.tasks = tasks.map(s => new Task(s));
   }
   get template() {
     /*html*/
@@ -41,11 +41,14 @@ export default class List {
           </button>
         </div>
       </form>
-    </div>`;
+    </div>
+    `;
   }
   drawTasks() {
     let template = "";
-    this.task.forEach(tasks => (template += tasks.templateTask));
+    this.tasks.forEach(Task => {
+      template += Task.templateTask;
+    });
     return template;
   }
 

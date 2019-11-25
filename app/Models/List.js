@@ -13,7 +13,6 @@ export default class List {
       <h5 class="text-center border-bottom">${this.name}</h5>
       <dl class="ml-5">${this.drawTasks()}</dl>
       <form  onsubmit="app.listController.addTask(event,'${this.id}')">
-        
             <label for="name" class="col-6-form-label">
             <input type="text" class="form-control" name="name" placeholder="Task.."/>
             <button type="submit" class="btn btn-warning mt-1" onclick="app.listController.addTask(event, listId)">Add Task</button>

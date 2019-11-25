@@ -28,6 +28,7 @@ class ListService {
     store.State.lists = store.State.lists.filter(list => list.id != listId);
     store.saveState();
   }
+
   deleteTask(listId, taskId) {
     let foundSession = store.State.sessions.find(task => task.id == taskId);
     foundSession.speakers = foundSession.tasks.filter(
@@ -35,7 +36,7 @@ class ListService {
     );
     store.saveState();
   }
-  constructor() {}
+
   //TODO  Here is where we handle all of our business logic,
   //given the information you need in the controller,
   //what methods will you need to do when this class is first 'constructed'?

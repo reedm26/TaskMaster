@@ -9,7 +9,7 @@ export default class Task {
   get templateTask() {
     /*html*/
     return `<dt>${this.name}</dt>
-    <button class="btn btn-danger" type="button" onclick="app.listController.deleteTask('${this.listId}','${this.id}')">Delete</button>
+    <button class="btn-sm btn-danger" type="button" onclick="app.listController.deleteTask('${this.listId}','${this.id}')">Delete</button>
     `;
   }
 }

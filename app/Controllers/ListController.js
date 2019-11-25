@@ -35,7 +35,6 @@ export default class ListController {
 
     ListService.addTask(newTask);
     form.reset();
-    debugger;
     _drawLists();
   }
   deleteList(listId) {

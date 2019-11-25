@@ -9,7 +9,7 @@ export default class List {
   get template() {
     /*html*/
     return ` 
-    <div class="col-12 mt-3 pt-3 border bg-info">
+    <div class="col-3 mt-3 pt-3 border bg-info">
       <h5 class="text-center border-bottom">${this.name}</h5>
       <dl  class="ml-5">${this.drawTasks()}</dl>
 

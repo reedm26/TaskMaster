@@ -5,7 +5,6 @@ import Task from "../Models/Tasks.js";
 class ListService {
   addList(newList) {
     let lists = new List(newList);
-
     store.State.lists.push(lists);
 
     console.log(newList);
@@ -16,14 +15,24 @@ class ListService {
     let task = new Task(newTask);
     let foundlist = store.State.lists.find(list => list.id == task.listId);
     foundlist.task.push(task);
-    console.log(store.State.lists);
+    console.log("made it to");
     store.saveState();
     // find the list by its id then add this task (push) to that list
     // store.State.lists.push(task);
   }
   deleteList(listId) {
+    if (confirm("Are you sure you wanna remove?")) {
+    } else return;
+
     let foundList = store.State.lists.findIndex(list => list.id == listId);
     store.State.lists = store.State.lists.filter(list => list.id != listId);
+    store.saveState();
+  }
+  deleteTask(listId, taskId) {
+    let foundSession = store.State.sessions.find(task => task.id == taskId);
+    foundSession.speakers = foundSession.tasks.filter(
+      speaker => speaker.id != taskId
+    );
     store.saveState();
   }
   constructor() {}

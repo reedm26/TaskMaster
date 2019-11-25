@@ -9,21 +9,18 @@ export default class List {
   get template() {
     /*html*/
     return ` 
-    <div class="col-6 mt-3 p-3 border rounded bg-info">
+    <div class="col-6 mt-3 pt-3 border  bg-info">
       <h5 class="text-center border-bottom">${this.name}</h5>
       <dl class="ml-5">${this.drawTasks()}</dl>
-      <form class=" mx-auto" onsubmit="app.listController.addTask(event,'${
-        this.id
-      }')">
-        <div class="row form-group justify-content-center">
-            <label for="name" class="col-form-label"></label>
+      <form  onsubmit="app.listController.addTask(event,'${this.id}')">
+        
+            <label for="name" class="col-6-form-label">
             <input type="text" class="form-control" name="name" placeholder="Task.."/>
-            <button type="submit" class="btn btn-warning mt-1" onclick="">Add Task</button>
+            <button type="submit" class="btn btn-warning mt-1" onclick="app.listController.addTask(event, listId)">Add Task</button>
             <button class="btn btn-danger mt-1" type="button" onclick="app.listController.deleteList('${
               this.id
             }')">Remove List</button>
-           
-        </div>
+           </label>
       </form>
     </div>`;
   }
